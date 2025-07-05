@@ -5,7 +5,8 @@ FROM ghcr.io/puppeteer/puppeteer:latest
 WORKDIR /app
 
 # Copy package files and install dependencies
-COPY package.json package-lock.json* ./
+# COPY package.json package-lock.json* ./
+COPY package.json ./
 RUN npm install
 
 # Copy source code
